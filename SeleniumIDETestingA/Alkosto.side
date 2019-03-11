@@ -1,0 +1,302 @@
+{
+  "id": "402261fb-f02a-4663-a85b-f58af6addbad",
+  "version": "2.0",
+  "name": "Alkosto",
+  "url": "https://www.alkosto.com",
+  "tests": [{
+    "id": "d0c29433-e5ae-429a-94ca-b2b769991c00",
+    "name": "Login Test",
+    "commands": [{
+      "id": "f0281207-2073-4472-b213-ade12fd0fb7c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acc32395-326f-46d5-92e9-9d541cc8a9cc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "784x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32723267-b0b9-40d8-b13c-6ccc37f5d3f9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.logo > img",
+      "targets": [
+        ["css=.logo > img", "css:finder"],
+        ["xpath=//img[@alt='Alkosto Hiperahorro']", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "972e9d56-7afd-4ae9-969f-89b9fbcf34f9",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.logo > img",
+      "targets": [
+        ["css=.logo > img", "css:finder"],
+        ["xpath=//img[@alt='Alkosto Hiperahorro']", "xpath:img"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "382cf86d-03ef-4858-a51d-dae13b00921a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Mi cuenta",
+      "targets": [
+        ["linkText=Mi cuenta", "linkText"],
+        ["css=.my-account-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Mi cuenta')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://secure.alkosto.com/customer/account/')]", "xpath:href"],
+        ["xpath=//div[3]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Mi cuenta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91d2518d-3879-4e7e-877e-a0206302fde6",
+      "comment": "",
+      "command": "click",
+      "target": "id=send2",
+      "targets": [
+        ["id=send2", "id"],
+        ["name=send", "name"],
+        ["css=#send2", "css:finder"],
+        ["xpath=//button[@id='send2']", "xpath:attributes"],
+        ["xpath=//form[@id='login-form']/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continuar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "57682cd0-2edd-4f48-ab9c-9e0c20170339",
+    "name": "Logout Test",
+    "commands": [{
+      "id": "f222dbbe-3a71-4a20-99e6-7709df820358",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3588904e-97b9-421d-a0da-8e3fdfd8feb3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "784x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fab95072-3c97-4f2c-a639-8e78cddd9b37",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Mi cuenta",
+      "targets": [
+        ["linkText=Mi cuenta", "linkText"],
+        ["css=.my-account-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Mi cuenta')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://secure.alkosto.com/customer/account/')]", "xpath:href"],
+        ["xpath=//div[3]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Mi cuenta')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "97ce456f-94cc-4696-a139-563268a45f40",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cerrar sesión",
+      "targets": [
+        ["linkText=Cerrar sesión", "linkText"],
+        ["css=.log-out-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Cerrar sesión')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://secure.alkosto.com/customer/account/logout/')]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cerrar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "319a4416-8081-49bb-9764-6ca5c81989ae",
+    "name": "Add IPhoneSE To Basket Test",
+    "commands": [{
+      "id": "8eb0667f-5c3e-4b2e-86b8-a0a0557cc1e9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5809cd3-2cb4-4b56-ad71-b8a049883cb8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "784x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95e06100-0f48-4f96-9978-2ff4c06eabf0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Mi carrito",
+      "targets": [
+        ["linkText=Mi carrito", "linkText"],
+        ["css=.top-link-cart", "css:finder"],
+        ["xpath=//a[contains(text(),'Mi carrito')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'https://secure.alkosto.com/checkout/cart/')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Mi carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "933379e9-1c86-4107-b401-3e848d181d74",
+      "comment": "",
+      "command": "click",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["name=q", "name"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='search_mini_form']/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f048c1d8-6ccb-409c-b825-378bef465172",
+      "comment": "",
+      "command": "type",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["name=q", "name"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='search_mini_form']/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "iphone se"
+    }, {
+      "id": "333d2206-7411-4552-a79e-ba8d79017739",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["name=q", "name"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='search_mini_form']/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_DOWN}"
+    }, {
+      "id": "63898133-7740-408b-9fb5-0cde127da449",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["name=q", "name"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='search_mini_form']/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_DOWN}"
+    }, {
+      "id": "42d9654d-0410-4fed-b4ba-ed83a78125cf",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["name=q", "name"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='search_mini_form']/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_UP}"
+    }, {
+      "id": "65d99c6c-d2b1-4411-a48c-e29eac009535",
+      "comment": "",
+      "command": "type",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["name=q", "name"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='search_mini_form']/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "iphone se"
+    }, {
+      "id": "14f2a00a-bc64-4e04-9df5-5e5e9612618b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Iphone Se 32 Gb",
+      "targets": [
+        ["linkText=Iphone Se 32 Gb", "linkText"],
+        ["css=li:nth-child(2) > .ac_li_query", "css:finder"],
+        ["xpath=//a[contains(text(),'Iphone Se 32 Gb')]", "xpath:link"],
+        ["xpath=//ul[@id='AC_SUG_Q_UL']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Iphone Se 32 Gb')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "174e329d-7bf7-4980-b38a-4da0334f9b22",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.add-to-cart > #cartpopup_btn_74152",
+      "targets": [
+        ["css=.add-to-cart > #cartpopup_btn_74152", "css:finder"],
+        ["xpath=(//button[@id='cartpopup_btn_74152'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='salesperson_result']/div[2]/ul/li/div[3]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar al carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cbc647b-72bf-46f9-b625-fbe7074ee065",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-to-cart > #cartpopup_btn_74152",
+      "targets": [
+        ["css=.add-to-cart > #cartpopup_btn_74152", "css:finder"],
+        ["xpath=(//button[@id='cartpopup_btn_74152'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='salesperson_result']/div[2]/ul/li/div[3]/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar al carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "803def24-a4ea-41ca-a9f7-9f3b1f10476c",
+      "comment": "",
+      "command": "click",
+      "target": "id=go_cart_btn",
+      "targets": [
+        ["id=go_cart_btn", "id"],
+        ["css=#go_cart_btn", "css:finder"],
+        ["xpath=//button[@id='go_cart_btn']", "xpath:attributes"],
+        ["xpath=//div[@id='product_cartpopup_74152']/div/div[6]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ir al carrito')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2ebed592-4e1a-4e3d-ba6c-3bb36b712736",
+    "name": "Alkosto Test Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d0c29433-e5ae-429a-94ca-b2b769991c00", "319a4416-8081-49bb-9764-6ca5c81989ae", "57682cd0-2edd-4f48-ab9c-9e0c20170339"]
+  }],
+  "urls": ["https://www.alkosto.com/"],
+  "plugins": []
+}
