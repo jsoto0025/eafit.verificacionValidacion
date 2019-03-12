@@ -6,3 +6,5 @@
 /TestScripting/packages
 /TestScripting/SeleniumTestA/bin/Debug
 /TestScripting/SeleniumTestA/obj/Debug
+/TestScripting/SeleniumTestA/bin/Release
+/TestScripting/SeleniumTestA/obj/Release

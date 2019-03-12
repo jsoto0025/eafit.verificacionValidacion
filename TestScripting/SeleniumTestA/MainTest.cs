@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -9,49 +10,48 @@ namespace SeleniumTestA
     public class MainTest
     {
 
-        ChromeDriver chromeDriver;
+        IWebDriver driver;
 
         [TestInitialize]
-        public void TestInitialice()
+        public  void TestInitialice()
         {
-            chromeDriver = new ChromeDriver();
-            chromeDriver.Url = "https://www.alkosto.com";
-
-            //var ventana = chromeDriver.FindElementByClassName("grow");
-            //ventana.Click();
+            driver = new ChromeDriver();
         }
 
         [TestMethod]
         [Priority(0)]
         public void LoginTest()
         {
+
+
+            driver.Url = "https://www.alkosto.com";
+            Thread.Sleep(10000);
+
             
-            var btnMyAccount = chromeDriver.FindElementByClassName("my-account-link");
+            var btnMyAccount = driver.FindElement(By.ClassName("my-account-link"));
 
             btnMyAccount.Click();
 
-            var txtLogin = chromeDriver.FindElementById("login-username");
+            var txtLogin = driver.FindElement(By.Id( "login-username"));
 
-            var txtPassword = chromeDriver.FindElementById("login-password");
+            var txtPassword = driver.FindElement(By.Id("login-password"));
 
             txtLogin.SendKeys("jsoto25@hotmail.com");
 
             txtPassword.SendKeys("indigo2");
 
-            var btnContinuar = chromeDriver.FindElementById("send2");
+            var btnContinuar = driver.FindElement(By.Id("send2"));
 
             btnContinuar.Click();
-            
-        }
 
-        [TestMethod]
-        [Priority(1)]
-        public void LogoutTest()
-        {
-            
-            var btnLogout = chromeDriver.FindElementByClassName("log-out-link");
+            var btnLogout = driver.FindElement(By.ClassName("log-out-link"));
             btnLogout.Click();
-            
+        }
+        
+        [TestCleanup]
+        public  void ClassCleanup()
+        {
+            driver.Close();
         }
     }
 }
