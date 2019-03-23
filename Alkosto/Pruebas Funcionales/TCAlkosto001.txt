@@ -1,0 +1,8 @@
+loadVars | Data001.csv | 
+open | https://www.alkosto.com/ | 
+captureEntirePageScreenshot |  | 
+click | id=search | 
+type | id=search | ${producto}
+captureEntirePageScreenshot |  | 
+click | id=searchSubmit | 
+captureEntirePageScreenshot |  | 

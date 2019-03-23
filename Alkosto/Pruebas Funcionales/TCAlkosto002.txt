@@ -1,0 +1,5 @@
+loadVars | Data002.csv | 
+open | https://www.alkosto.com/ | 
+captureEntirePageScreenshot |  | 
+click | link=LG | 
+captureEntirePageScreenshot |  | 
