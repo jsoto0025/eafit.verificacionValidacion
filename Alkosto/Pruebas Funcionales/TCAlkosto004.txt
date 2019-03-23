@@ -1,0 +1,4 @@
+open | https://secure.alkosto.com/checkout/cart/ | 
+captureEntirePageScreenshot |  | 
+click | link=Eliminar | 
+captureEntirePageScreenshot |  | 
