@@ -25,7 +25,7 @@ namespace SeleniumTestA
 
 
             driver.Url = "https://www.alkosto.com";
-            Thread.Sleep(10000);
+            Thread.Sleep(3000);
 
             
             var btnMyAccount = driver.FindElement(By.ClassName("my-account-link"));
