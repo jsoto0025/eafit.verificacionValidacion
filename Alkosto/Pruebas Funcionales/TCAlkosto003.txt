@@ -1,0 +1,10 @@
+loadVars | Data003.csv | 
+open | https://www.alkosto.com/ | 
+captureEntirePageScreenshot |  | 
+click | id=search | 
+type | id=search | ${busqueda}
+captureEntirePageScreenshot |  | 
+click | id=searchSubmit | 
+click | xpath=(.//*[normalize-space(text()) and normalize-space(.)='Ver detalle'])[3]/following::button[1] | 
+click | id=go_cart_btn | 
+captureEntirePageScreenshot |  | 
