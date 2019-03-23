@@ -1,0 +1,8 @@
+open | https://www.alkosto.com/ | 
+captureEntirePageScreenshot |  | 
+click | xpath=(.//*[normalize-space(text()) and normalize-space(.)='Suscribirse'])[1]/following::img[1] | 
+click | link=3 | 
+click | link=3 | 
+captureEntirePageScreenshot |  | 
+click | xpath=(.//*[normalize-space(text()) and normalize-space(.)='Mi cuenta'])[1]/following::img[3] | 
+captureEntirePageScreenshot |  | 
