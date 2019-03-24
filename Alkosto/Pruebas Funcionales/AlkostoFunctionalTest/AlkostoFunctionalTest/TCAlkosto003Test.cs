@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
-namespace SeleniumTests
+namespace AlkostoFunctionalTest
 {
 
 
@@ -68,15 +68,18 @@ namespace SeleniumTests
             // ERROR: Caught exception [ERROR: Unsupported command [loadVars | Data003.csv | ]]
             driver.Navigate().GoToUrl("https://www.alkosto.com/");
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            Utilis.TakeScreenShot(driver, "TCAlkosto003");
             string busqueda = TestContext.DataRow["busqueda"].ToString();
             driver.FindElement(By.Id("search")).Click();
             driver.FindElement(By.Id("search")).Clear();
             driver.FindElement(By.Id("search")).SendKeys(busqueda);
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            Utilis.TakeScreenShot(driver, "TCAlkosto003");
             driver.FindElement(By.Id("searchSubmit")).Click();
             driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Ver detalle'])[3]/following::button[1]")).Click();
             driver.FindElement(By.Id("go_cart_btn")).Click();
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            Utilis.TakeScreenShot(driver, "TCAlkosto003");
         }
         private bool IsElementPresent(By by)
         {

@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
-namespace SeleniumTests
+namespace AlkostoFunctionalTest
 {
     [TestClass]
     public class TCAlkosto004Test
@@ -57,8 +57,10 @@ namespace SeleniumTests
         {
             driver.Navigate().GoToUrl("https://secure.alkosto.com/checkout/cart/");
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            Utilis.TakeScreenShot(driver, "TCAlkosto004");
             driver.FindElement(By.LinkText("Eliminar")).Click();
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            Utilis.TakeScreenShot(driver, "TCAlkosto004");
         }
         private bool IsElementPresent(By by)
         {

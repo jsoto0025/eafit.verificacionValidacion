@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
-namespace SeleniumTests
+namespace AlkostoFunctionalTest
 {
     [TestClass]
     public class TCAlkosto002Test
@@ -60,9 +60,11 @@ namespace SeleniumTests
             // ERROR: Caught exception [ERROR: Unsupported command [loadVars | Data002.csv | ]]
             driver.Navigate().GoToUrl("https://www.alkosto.com/");
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            Utilis.TakeScreenShot(driver, "TCAlkosto002");
             string marca = TestContext.DataRow["marca"].ToString();
             driver.FindElement(By.LinkText(marca)).Click();
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            Utilis.TakeScreenShot(driver, "TCAlkosto002");
         }
         private bool IsElementPresent(By by)
         {

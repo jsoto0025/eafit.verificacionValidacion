@@ -1,4 +1,6 @@
 using System;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -7,7 +9,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
-namespace SeleniumTests
+namespace AlkostoFunctionalTest
 {
     [TestClass]
 
@@ -18,14 +20,14 @@ namespace SeleniumTests
         private StringBuilder verificationErrors;
         private static string baseURL;
         private bool acceptNextAlert = true;
-        
+
         [ClassInitialize]
         public static void InitializeClass(TestContext testContext)
         {
             driver = new FirefoxDriver();
             baseURL = "https://www.katalon.com/";
         }
-        
+
         [ClassCleanup]
         public static void CleanupClass()
         {
@@ -40,19 +42,19 @@ namespace SeleniumTests
                 // Ignore errors if unable to close the browser
             }
         }
-        
+
         [TestInitialize]
         public void InitializeTest()
         {
             verificationErrors = new StringBuilder();
         }
-        
+
         [TestCleanup]
         public void CleanupTest()
         {
             Assert.AreEqual("", verificationErrors.ToString());
         }
-        
+
         [TestMethod]
         [Priority(1)]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", @"Data\Data001.csv", "Data001#csv", DataAccessMethod.Sequential)]
@@ -65,10 +67,14 @@ namespace SeleniumTests
             driver.FindElement(By.Id("search")).Click();
             driver.FindElement(By.Id("search")).Clear();
             driver.FindElement(By.Id("search")).SendKeys(producto);
-            
+
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            
+            Utilis.TakeScreenShot(driver, "TCAlkosto001");
+
             driver.FindElement(By.Id("searchSubmit")).Click();
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            Utilis.TakeScreenShot(driver, "TCAlkosto001");
             Assert.AreEqual(true, true);
         }
         private bool IsElementPresent(By by)
@@ -83,7 +89,7 @@ namespace SeleniumTests
                 return false;
             }
         }
-        
+
         private bool IsAlertPresent()
         {
             try
@@ -96,18 +102,25 @@ namespace SeleniumTests
                 return false;
             }
         }
-        
-        private string CloseAlertAndGetItsText() {
-            try {
+
+        private string CloseAlertAndGetItsText()
+        {
+            try
+            {
                 IAlert alert = driver.SwitchTo().Alert();
                 string alertText = alert.Text;
-                if (acceptNextAlert) {
+                if (acceptNextAlert)
+                {
                     alert.Accept();
-                } else {
+                }
+                else
+                {
                     alert.Dismiss();
                 }
                 return alertText;
-            } finally {
+            }
+            finally
+            {
                 acceptNextAlert = true;
             }
         }

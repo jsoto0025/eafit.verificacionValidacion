@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
-namespace SeleniumTests
+namespace AlkostoFunctionalTest
 {
     [TestClass]
     public class TCAlkosto005Test
@@ -61,8 +61,10 @@ namespace SeleniumTests
             driver.FindElement(By.LinkText("3")).Click();
             driver.FindElement(By.LinkText("3")).Click();
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            Utilis.TakeScreenShot(driver, "TCAlkosto005");
             driver.FindElement(By.XPath("(.//*[normalize-space(text()) and normalize-space(.)='Mi cuenta'])[1]/following::img[3]")).Click();
             // ERROR: Caught exception [ERROR: Unsupported command [captureEntirePageScreenshot |  | ]]
+            Utilis.TakeScreenShot(driver, "TCAlkosto005");
         }
         private bool IsElementPresent(By by)
         {
