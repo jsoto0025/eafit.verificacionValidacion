@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace AlkostoFunctionalTest
 {
+    /// <summary>
+    /// Utilidades requeridas para las purebas funcionales.
+    /// </summary>
     public static class Utilis
     {
         public const string screenShotsDirectoryName = "ScreeShots";
